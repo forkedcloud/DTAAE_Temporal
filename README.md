@@ -1,87 +1,79 @@
-# DTAAE_Temporal
-DTAAE (Disk Trash Avoid Avenue Exp) Repository for Viewer Made Malware series
+# 🛡️ DTAAE_Temporal
+Disk Trash Avoid Avenue Exp (DTAAE) is a malware made especially for the *Viewer Made Malware* series
 
+---
+# 🔥 Main Details
+**DTAAE** is a malware developed in C# designed to destroy data while bypassing antivirus defenses.
 
+This is a lightweight, fast, and direct piece of malware with no flashy effects or gimmicks — just pure destructive capability.
 
+> **Tested Platforms:**
+> * Windows 7
+> *  Windows 10
+> *  Compatibility with XP or Windows 11 is unverified, might not work.
 
+## 🧪 Antivirus Tests
+**DTAAE** was tested against **14 antivirus** programs, all of which failed to stop it. (Note: Results may vary in the future.)
 
-# Main Details
+| **Antivirus Name** | **Virus Won** | **Virus Lost** |  
+|---------------------|---------------|----------------|  
+| Avast              | ✅            | ❌             |  
+| MalwareBytes       | ✅            | ❌             |  
+| AVG                | ✅            | ❌             |  
+| Nod32              | ✅            | ❌             |  
+| Kaspersky          | ✅            | ❌             |  
+| Bitdefender        | ✅            | ❌             |  
+| Avira              | ✅            | ❌             |  
+| TotalAV            | ✅            | ❌             |  
+| Panda              | ✅            | ❌             |  
+| Emsisoft           | ✅            | ❌             |  
+| Windows Defender   | ✅            | ❌             |  
+| TrendMicro         | ✅            | ❌             |  
+| Norton             | ✅            | ❌             |  
+| McAfee             | ✅            | ❌             |  
 
-DTAAE is a malware i've made in C# to destroy data while avoiding antiviruses.
+---
 
-No special effects nor other stuff, just direct, small and fast malware
+## ⚔️ Attack Explanation  
+DTAAE’s attack unfolds in **3 rapid stages**, making it extremely difficult to counter or quarantine once detected:  
 
-(I only tested this on Win 7 and Win 10. Other systems like XP or 11 might not work)
+### 🌀 Stage 1:  
+The malware marks itself a **Critical Process**, making sure that its termination triggers a BSOD (Blue Screen of Death). This mechanism also crashes the system after the destruction is complete.  
 
-I have tested 14 AVs and all of them failed protecting the computer 
+### 🚫 Stage 2:  
+DTAAE denies access to the **C:** drive for all processes (excluding itself). Since DTAAE doesn’t directly access files and **C:** is merely a partition, this step ensures antivirus tools are crippled.  
 
-(Note: the results can change in the future)
+### 💥 Stage 3:  
+The malware clears the first **5 MB** of the disk, effectively destroying the **MBR (Master Boot Record)** or **GPT (GUID Partition Table)**. In some cases, parts of a partition may also be deleted.
+> *Note: This destruction is difficult to recover from, unlike tools like MEMZ that utilize Windows installer ISOs for recovery.*
+> *However, there is a concern of GPT Backup Headers which are located at the end of the disk which store the GPT headers as a backup.*
 
-|Antivirus Name|Virus Won|Virus Lost|
-|----------------|---------|--------|
-|Avast|O| |
-|MalwareBytes|O||
-|AVG|O||
-|Nod32|O||
-|Kaspersky|O||
-|Bitdefender|O||
-|Avira|O||
-|TotalAV|O||
-|Panda|O||
-|Emsisoft|O||
-|Windows Defender|O||
-|TrendMicro|O||
-|Norton|O||
-|McAfee|O||
+All three stages are executed within seconds, leaving minimal time for counteraction.
 
-# Attack Explanation
+---
 
-DTAAE's Attack Process is made of 3 Stages:
+## 📥 How to Get  
 
-- Stage 1:
+### ⚠️ **WARNING: DTAAE is highly dangerous. For this reason, it will only be distributed to verified creators in the *Viewer Made Malware* series.**
+### 📜 Instructions for Verified Creators:  
 
-  Make itself as a Critical Process to trigger a BSOD if terminated (its also used to crash the PC after destruction is done)
+1. **Download** the ZIP file from this repository.  
+2. Extract the ZIP using the key provided via email or Discord by the developer.  
+3. A second ZIP file will appear; its password can be found in the comments section of the file under `paasuwoodo`.  
+   > *Tip: Use WinRAR to view file comments.*  
+4. Extract the final ZIP on a **virtual machine (VM) without internet access** to prevent unintended distribution.  
+   - Generally, try to **avoid all public sandboxes** like Any.Run, Intezer Analyzer, or VirusTotal.  
+5. Make sure your VM has **.NET Framework 3.5** installed.  
+   - *Check this via ‘Turn Windows Features On or Off’ on your VM.*  
+6. Before running DTAAE, **create a file named `GabeIsCute.X3` on the C:** drive of your VM.  
+   - This prevents accidental execution of the malware.  
+7. You're ready! Have fun experimenting responsibly! 😈  
 
-- Stage 2:
+---
 
-  Deny access to the C: drive to all processes (this dosen't affect DTAAE as it dosen't access files and C: is just a partition, not a disk)
+## 🚨 Reporting Unauthorized Distribution  
+If you find DTAAE being distributed without my permission, please report it immediately via the [Issues](https://github.com/Gabolate/DTAAE_Temporal/issues) page.  
 
-  (This is mainly what prevents antiviruses from stopping it)
+---
 
-- Stage 3:
- 
-  DTAAE will clear the first 5 MB of the disk, destroying the MBR (GPT if present) and possibly a bit of a partition
-
-  (If it deletes some pieces of a partition its very unlikely that it could be recovered with the method used for MEMZ with a Windows installer ISO)
-
-
-All 3 stages are done in a matter of seconds, its very hard to do anything if the user finds out the PC is infected.
-
-
-# How to get
-
-DTAAE is very dangerous and because of that i won't be giving it publicly, only to known channels that make Viewer Made Malware series.
-
-If you are one of them, please follow these instructions:
-
-- Download the zip file of this repository
-
-- Extract it with the key i've sent you trough Email or Discord.
-
-- You will get another zip file, the password for it is on the file's comments under the 'paasuwoodo' section
-
-  (I recommend to use winrar to see the comments)
-
-- Extract DTAAE on a VM WITHOUT internet, i don't want this to be automatically sent to random servers
-
-  (This also includes NOT using public sandboxes like Any.Run or Intezer Analyzer or VirusTotal)
-
-- Make sure your VM has .NET Framework 3.5 Installed (Check 'Turn On or Off Windows features' to install it)
-
-- Before you run DTAAE create a file named 'GabeIsCute.X3' on the C: drive of your VM (this is to prevent running the malware accidentally)
-
-- Have fun with it :D
-
-If you see DTAAE being distributed on other places without my pemission please report it IMMEDIATELY to [Issues](https://github.com/Gabolate/DTAAE_Temporal/issues)
-
-Made by Gabolate (Gabe) ∑:3 2024
+Made by **Gabolate (Gabe)** ∑:3 | 2024.
