@@ -54,7 +54,7 @@ All three stages are executed within seconds, leaving minimal time for counterac
 
 ## 📥 How to Get  
 
-### ⚠️ $\textcolor{red}{\textsf{**WARNING:** DTAAE is highly dangerous. For this reason, it will only be distributed to verified creators in the *Viewer Made Malware* series.}}$
+### ⚠️ <span style="color:red;">**WARNING:**</span> DTAAE is highly dangerous. For this reason, it will only be distributed to verified creators in the *Viewer Made Malware* series.
 
 ### 📜 Instructions for Verified Creators:  
 
